@@ -4,15 +4,14 @@ const logic = new Logic()
 
 
 
-
-
 let attemptsCounter = 0
 let card1
 let card2 
 let clickCounter = 1
 
 
-cardsDeck.getCard(2)        // add feature of number of pairs and play w/ this  + this is an API *aSync* request
+cardsDeck.getCard(8)        // add feature of number of pairs and play w/ this  + this is an API *aSync* request
+
 
 
 $('#startBtn').click(function(){
@@ -20,7 +19,6 @@ $('#startBtn').click(function(){
     $('#startBtn').text('Play again')
     attemptsCounter = 0                                 // y did var didn't work ? ?
 })
-
 
 
 

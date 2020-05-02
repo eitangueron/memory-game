@@ -10,7 +10,7 @@ class Logic{
 
     checkEndGame(){
         if($('img').length ===0){
-            if(localStorage.bestScore === undefined){ ////For the first game users plays => just a big num which will be win for sure
+            if(localStorage.bestScore === undefined){ ////For the first game user plays => just a big num which will be win for sure
                 localStorage.bestScore = '200'
             }
             const bestEver = JSON.parse(localStorage.bestScore) 
