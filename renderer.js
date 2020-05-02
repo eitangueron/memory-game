@@ -18,15 +18,13 @@ const getRandomLocation = function(gridAreasArray){
     return gridArea
 }
 
+
 const source = $('#card-template').html()
 const template = Handlebars.compile(source)
 
 
 class Renderer{
-    constructor(){
-
-    }
-
+    
     displayFullSet(cardDeck){
 
         creatGridAreasArray()
@@ -39,13 +37,14 @@ class Renderer{
                 const newHTML2 = template({imgSrc:cardDeck[i].image, value:cardDeck[i].value, suit:cardDeck[i].suit, girdArea:girdArea2})
                 $('#gameContainer').append(newHTML1)
                 $('#gameContainer').append(newHTML2)
-
-                // $('#gameContainer').append(`<img src=${cardDeck[i].image} data-id="${cardDeck[i].value} of ${cardDeck[i].suit}" data-grid-area="${girdArea1}" style="grid-area: ${girdArea1}">`)
-                // $('#gameContainer').append(`<img src=${cardDeck[i].image} data-id="${cardDeck[i].value} of ${cardDeck[i].suit}" data-grid-area="${girdArea2}" style="grid-area: ${girdArea2}">`)
             }
         }
     }
 
+    flip(card){
+        $(card).toggleClass('clicked')
+    }
+    
 }
 
 
