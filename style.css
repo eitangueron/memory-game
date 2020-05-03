@@ -45,7 +45,8 @@ button{
     transform: rotateY(180deg)
 } */
 
-/* this will b activated on reval - click : */
+
+/* this will b activated/deactivated on card click : */
 .card.clicked{
     transform: rotateY(180deg)
 }

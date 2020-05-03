@@ -10,7 +10,8 @@ let card2
 let clickCounter = 1
 
 
-cardsDeck.getCard(8)        // add feature of number of pairs and play w/ this  + this is an API *aSync* request
+cardsDeck.getCard(8)        //this is an API *aSync* request
+                            // To do: add feature of number of card pairs and play w/ this & the grid 
 
 
 

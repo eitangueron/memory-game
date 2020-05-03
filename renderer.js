@@ -47,8 +47,3 @@ class Renderer{
     
 }
 
-
-// imgSrc
-// value
-// suit
-// gridArea
