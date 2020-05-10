@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Memory Game</title>
+</head>
+<body>
+    <div id="title-container">
+        <h1 id="title">~Memory Game~</h1>
+        <button id='startBtn'>Start</button>
+        <hr>
+    </div>
+
+
+    <div id="gameContainer"></div>
+
+
+
+
+    
+    <script id="card-template" type="text/x-handlebars-template">
+        <div class="card-container" style="grid-area: {{girdArea}};">
+            <div class="card" data-id="{{value}} of {{suit}}" data-grid-area="{{girdArea}}" >
+                <div class="back"><img src="http://www.jimknapp.com/Cards/Non-Bicycle_files/image002.jpg"></div>
+                <div class="front"><img src={{imgSrc}}></div>
+            </div>
+        </div>
+    </script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script> 
+    <script src="apiManager.js"></script>
+    <script src="renderer.js"></script>
+    <script src="logic.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
