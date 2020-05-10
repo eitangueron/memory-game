@@ -1,4 +1,4 @@
-const cardsDeck = new Cards()
+const cardsDeck = new CardsDeck()
 const render = new Renderer()
 const logic = new Logic()
 
@@ -18,13 +18,13 @@ cardsDeck.getCard(8)        //this is an API *aSync* request
 $('#startBtn').click(function(){
     render.displayFullSet(cardsDeck.cards)
     $('#startBtn').text('Play again')
-    attemptsCounter = 0                                 // y did var didn't work ? ?
+    attemptsCounter = 0                                 
 })
 
 
 
 $('#gameContainer').on('click', 'img', function(){
-    if($('.clicked').length <=1){
+    if($('.clicked').length <=1){               //eleminating option for user to click while cards havent flliped yet (visuall elegence)
         if(clickCounter%2 !==0){
             card1 = this.closest('.card')
             render.flip(card1)

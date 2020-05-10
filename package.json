@@ -1,0 +1,23 @@
+{
+  "name": "memory-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "review": "node node_modules/elevation-pr/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eitangueron/memory-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eitangueron/memory-game/issues"
+  },
+  "homepage": "https://github.com/eitangueron/memory-game#readme",
+  "dependencies": {
+    "elevation-pr": "^1.2.0"
+  }
+}

@@ -1,4 +1,4 @@
-class Cards{
+class CardsDeck{
 
     constructor(){
         this.cards = []
@@ -6,12 +6,14 @@ class Cards{
 
     getCard(numOfCards){
         $.get(`https://deckofcardsapi.com/api/deck/new/draw/?count=${numOfCards}`,(randomCards)=>{
-            for(let i in randomCards.cards){
-                this.cards.push(randomCards.cards[i])
-            }
+            randomCards.cards.forEach(card => this.cards.push(card))
         })
     }
 
 }
 
 
+
+// for(let i in randomCards.cards){
+//     //     this.cards.push(randomCards.cards[i])
+//     // }

@@ -1,11 +1,9 @@
 
 const gridAreas = []
-const rows = 4
-const columns = 4
 
-const creatGridAreasArray = function(){
-    for(let x=1; x<rows+1; x++){
-        for(let y=1; y<columns+1; y++){
+const creatGridAreasArray = function(numOfRows, numOfColumns){
+    for(let x=1; x<numOfRows+1; x++){
+        for(let y=1; y<numOfColumns+1; y++){
             gridAreas.push(`${x}/${y}`)
         }
     }
@@ -13,7 +11,7 @@ const creatGridAreasArray = function(){
 
 
 const getRandomLocation = function(gridAreasArray){       
-    gridArea = gridAreasArray[Math.floor(Math.random()*gridAreasArray.length)]
+    const gridArea = gridAreasArray[Math.floor(Math.random()*gridAreasArray.length)]
     gridAreasArray.splice(gridAreasArray.indexOf(gridArea),1)
     return gridArea
 }
@@ -27,9 +25,9 @@ class Renderer{
     
     displayFullSet(cardDeck){
 
-        creatGridAreasArray()
+        creatGridAreasArray(4,4)
 
-        if($('img').length===0){
+        if($('img').length===0){                //making sure the game is over
             for(let i in cardDeck){
                 const girdArea1 = getRandomLocation(gridAreas)
                 const girdArea2 = getRandomLocation(gridAreas)

@@ -38,7 +38,7 @@ button{
     height: 100%;
     width: 100%;
     transform-style: preserve-3d;
-    transition: ease-in-out 1s transform;
+    transition: ease-in-out 1s ;
 } 
 
 /* .card-container:hover .card{
@@ -47,6 +47,7 @@ button{
 
 
 /* this will b activated/deactivated on card click : */
+
 .card.clicked{
     transform: rotateY(180deg)
 }
